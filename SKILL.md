@@ -14,7 +14,7 @@ author: Odaily
 所有数据通过 Bash 运行以下命令获取（必须先 cd 到 skill 目录）：
 
 ```bash
-cd ~/.claude/skills/odaily && python3 run.py <工具名> '<JSON参数>'
+cd ~/.openclaw/workspace/skills/odaily-skill && python3 run.py <工具名> '<JSON参数>'
 ```
 
 | 工具名 | 参数 | 板块 |
