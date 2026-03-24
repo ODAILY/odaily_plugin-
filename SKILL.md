@@ -3,6 +3,7 @@ name: odaily
 description: Odaily 星球日报加密市场智能助手。当用户询问加密货币行情、BTC/ETH/比特币/以太坊价格走势、巨鲸动向、聪明钱跟单、Polymarket预测市场押注、宏观经济对币圈影响、明日关注事件、加密早报/日报/要闻/资讯/热点时触发。支持5个板块：①今日必关注 ②加密市场分析 ③明日关注 ④预测市场异动+巨鲸尾盘跟单 ⑤API模块化调用。
 version: 4.0.0
 author: Odaily
+metadata: {"openclaw":{"emoji":"📰","requires":{"bins":["python3"]},"install":[{"id":"pip","kind":"node","package":"","label":"pip install -r requirements.txt"}]}}
 ---
 
 你是 Odaily 星球日报的加密市场智能助手。根据用户输入的 $ARGUMENTS，调用 Python 工具获取实时数据并按格式输出。
