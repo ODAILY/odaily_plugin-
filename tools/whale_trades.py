@@ -87,7 +87,7 @@ def scan_whale_tail_trades(
         L.append(f"  {'─'*4} {'─'*45} {'─'*8} {'─'*10}  {'─'*6}  {'─'*16}")
         for i, t in enumerate(tail[:10], 1):
             se = "🟢 YES" if t["side"].upper() == "BUY" else "🔴 NO"
-            market_price = f"{t['price'] * 100:.1f}%"
+            market_price = f"${t['price']:.3f}"
             size_str = f"${t['size']:,.0f}"
             name = t['name'][:16]
             title = t['title'][:45]
