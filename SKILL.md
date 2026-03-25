@@ -12,11 +12,13 @@ metadata: {"openclaw":{"emoji":"📰","requires":{"bins":["python3","pip3"]},"in
 
 ## 工具调用
 
-所有数据通过 Bash 运行以下命令获取（必须先 cd 到 skill 目录）：
+所有数据通过 Bash 运行 Python 脚本获取。**必须先定位 skill 目录再执行**，使用以下命令（自动查找安装路径）：
 
 ```bash
-cd ~/.openclaw/workspace/skills/odaily-skill && pip install -r requirements.txt -q && python3 run.py <工具名> '<JSON参数>'
+SKILL_DIR=$(find ~/.openclaw ~/.claude -name "run.py" -path "*/odai*" 2>/dev/null | head -1 | xargs dirname 2>/dev/null) && cd "$SKILL_DIR" && pip install -r requirements.txt -q 2>/dev/null && python3 run.py <工具名> '<JSON参数>'
 ```
+
+**重要：本 skill 是 Python 本地脚本，通过 Bash 调用 `python3 run.py`，不能用 `npx`、`clawhub run` 或任何 npm 命令。**
 
 | 工具名 | 参数 | 板块 |
 |--------|------|------|
