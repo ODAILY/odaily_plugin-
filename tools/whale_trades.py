@@ -83,15 +83,15 @@ def scan_whale_tail_trades(
             "🎯 Top 10 高确定性尾盘交易",
             "",
         ]
-        L.append(f"  {'#':<4} {'事件':<45} {'方向':<8} {'金额':>10}  {'胜率':>6}  巨鲸")
+        L.append(f"  {'排序':<4} {'事件(中文概括)':<45} {'方向':<8} {'金额':>10}  {'市场价':>6}  巨鲸")
         L.append(f"  {'─'*4} {'─'*45} {'─'*8} {'─'*10}  {'─'*6}  {'─'*16}")
         for i, t in enumerate(tail[:10], 1):
             se = "🟢 YES" if t["side"].upper() == "BUY" else "🔴 NO"
-            prob = f"{t['price'] * 100:.1f}%"
+            market_price = f"{t['price'] * 100:.1f}%"
             size_str = f"${t['size']:,.0f}"
             name = t['name'][:16]
             title = t['title'][:45]
-            L.append(f"  {i:<4} {title:<45} {se:<8} {size_str:>10}  {prob:>6}  {name}")
+            L.append(f"  {i:<4} {title:<45} {se:<8} {size_str:>10}  {market_price:>6}  {name}")
         L.append("")
         # 附链接列表
         L.append("  🔗 相关链接:")
